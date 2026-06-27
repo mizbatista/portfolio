@@ -1,0 +1,402 @@
+/* ==========================================
+                GOOGLE RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#09090B;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+                HEADER
+========================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 0;
+
+    transition:.35s ease;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.30),
+        transparent
+    );
+
+}
+
+/* Quando rolar */
+
+header.scroll{
+
+    background:rgba(10,10,10,.82);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+    padding:16px 0;
+
+}
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.container{
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+.logo{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:#F472B6;
+
+}
+
+/* ==========================================
+                MENU
+========================================== */
+
+nav{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:36px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#F472B6;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#F472B6;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+            BOTÃO WHATSAPP
+========================================== */
+
+.btn-whatsapp{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #F9A8D4,
+        #EC4899
+    );
+
+    box-shadow:0 10px 25px rgba(236,72,153,.35);
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.btn-whatsapp i{
+
+    font-size:20px;
+
+}
+
+.btn-whatsapp:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(236,72,153,.50);
+
+}
+
+/* brilho */
+
+.btn-whatsapp::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:50%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    transition:.7s;
+
+}
+
+.btn-whatsapp:hover::before{
+
+    left:130%;
+
+}
+
+/* ==========================================
+            MENU MOBILE
+========================================== */
+
+.hamburger{
+
+    display:none;
+
+    width:32px;
+
+    height:24px;
+
+    cursor:pointer;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+.hamburger span{
+
+    width:100%;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:white;
+
+    transition:.35s;
+
+}
+
+/* X */
+
+.hamburger.active span:nth-child(1){
+
+    transform:translateY(10px) rotate(45deg);
+
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:translateY(-10px) rotate(-45deg);
+
+}
+
+/* ==========================================
+                RESPONSIVO
+========================================== */
+
+@media(max-width:950px){
+
+    .btn-whatsapp{
+
+        display:none;
+
+    }
+
+    .hamburger{
+
+        display:flex;
+
+    }
+
+    nav{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:300px;
+
+        height:100vh;
+
+        background:rgba(15,15,15,.96);
+
+        backdrop-filter:blur(25px);
+
+        justify-content:flex-start;
+
+        padding-top:120px;
+
+        transition:.4s;
+
+        border-left:1px solid rgba(255,255,255,.05);
+
+    }
+
+    nav.active{
+
+        right:0;
+
+    }
+
+    nav ul{
+
+        width:100%;
+
+        flex-direction:column;
+
+        gap:40px;
+
+        align-items:center;
+
+    }
+
+}
+
+/* ==========================================
+                SEÇÕES
+========================================== */
+
+section{
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+}
