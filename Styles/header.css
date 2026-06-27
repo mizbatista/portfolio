@@ -1,5 +1,5 @@
 /* ==========================================
-                GOOGLE RESET
+                RESET
 ========================================== */
 
 *{
@@ -16,7 +16,7 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:#09090B;
+    background:#0B0B0F;
 
     color:#fff;
 
@@ -43,25 +43,23 @@ header{
 
     background:linear-gradient(
         to bottom,
-        rgba(0,0,0,.30),
+        rgba(0,0,0,.35),
         transparent
     );
 
 }
 
-/* Quando rolar */
-
 header.scroll{
 
-    background:rgba(10,10,10,.82);
+    background:rgba(10,10,10,.85);
 
     backdrop-filter:blur(18px);
 
     -webkit-backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255, 221, 87, .15);
 
-    box-shadow:0 10px 35px rgba(0,0,0,.25);
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
 
     padding:16px 0;
 
@@ -103,7 +101,7 @@ header.scroll{
 
 .logo span{
 
-    color:#F472B6;
+    color:#FFD84D;
 
 }
 
@@ -149,7 +147,7 @@ nav a{
 
 nav a:hover{
 
-    color:#F472B6;
+    color:#FFD84D;
 
 }
 
@@ -167,7 +165,7 @@ nav a::after{
 
     height:2px;
 
-    background:#F472B6;
+    background:#FFD84D;
 
     border-radius:50px;
 
@@ -182,7 +180,7 @@ nav a:hover::after{
 }
 
 /* ==========================================
-            BOTÃO WHATSAPP
+            BOTÃO WHATSAPP (AMARELO)
 ========================================== */
 
 .btn-whatsapp{
@@ -197,7 +195,7 @@ nav a:hover::after{
 
     text-decoration:none;
 
-    color:#fff;
+    color:#111;
 
     border-radius:999px;
 
@@ -205,11 +203,11 @@ nav a:hover::after{
 
     background:linear-gradient(
         135deg,
-        #F9A8D4,
-        #EC4899
+        #FFF1A6,
+        #FFD84D
     );
 
-    box-shadow:0 10px 25px rgba(236,72,153,.35);
+    box-shadow:0 10px 25px rgba(255, 216, 77, .35);
 
     transition:.35s;
 
@@ -229,7 +227,7 @@ nav a:hover::after{
 
     transform:translateY(-4px);
 
-    box-shadow:0 15px 35px rgba(236,72,153,.50);
+    box-shadow:0 15px 35px rgba(255, 216, 77, .55);
 
 }
 
@@ -250,15 +248,10 @@ nav a:hover::after{
     height:100%;
 
     background:linear-gradient(
-
         120deg,
-
         transparent,
-
-        rgba(255,255,255,.35),
-
+        rgba(255,255,255,.45),
         transparent
-
     );
 
     transition:.7s;
@@ -305,24 +298,16 @@ nav a:hover::after{
 
 }
 
-/* X */
-
 .hamburger.active span:nth-child(1){
-
     transform:translateY(10px) rotate(45deg);
-
 }
 
 .hamburger.active span:nth-child(2){
-
     opacity:0;
-
 }
 
 .hamburger.active span:nth-child(3){
-
     transform:translateY(-10px) rotate(-45deg);
-
 }
 
 /* ==========================================
@@ -332,15 +317,11 @@ nav a:hover::after{
 @media(max-width:950px){
 
     .btn-whatsapp{
-
         display:none;
-
     }
 
     .hamburger{
-
         display:flex;
-
     }
 
     nav{
@@ -348,11 +329,9 @@ nav a:hover::after{
         position:fixed;
 
         top:0;
-
         right:-100%;
 
         width:300px;
-
         height:100vh;
 
         background:rgba(15,15,15,.96);
@@ -365,25 +344,23 @@ nav a:hover::after{
 
         transition:.4s;
 
-        border-left:1px solid rgba(255,255,255,.05);
+        border-left:1px solid rgba(255, 221, 87, .08);
 
     }
 
     nav.active{
-
         right:0;
-
     }
 
     nav ul{
-
-        width:100%;
 
         flex-direction:column;
 
         gap:40px;
 
         align-items:center;
+
+        width:100%;
 
     }
 
@@ -398,5 +375,21 @@ section{
     min-height:100vh;
 
     padding:120px 8%;
+
+}
+
+/* ==========================================
+                LINK ATIVO
+========================================== */
+
+nav a.active{
+
+    color:#FFD84D;
+
+}
+
+nav a.active::after{
+
+    width:100%;
 
 }
