@@ -15,9 +15,7 @@ html{
 body{
 
     font-family:'Poppins',sans-serif;
-
     background:#0B0B0F;
-
     color:#fff;
 
 }
@@ -29,12 +27,10 @@ body{
 header{
 
     position:fixed;
-
     top:0;
     left:0;
 
     width:100%;
-
     z-index:999;
 
     padding:22px 0;
@@ -49,19 +45,49 @@ header{
 
 }
 
+/* HEADER AO SCROLL (BRANCO) */
+
 header.scroll{
 
-    background:rgba(10,10,10,.85);
+    background:#ffffff;
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(0,0,0,.08);
 
-    border-bottom:1px solid rgba(255, 221, 87, .15);
-
-    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
 
     padding:16px 0;
+
+}
+
+/* ==========================================
+            TEXTO NO HEADER SCROLL
+========================================== */
+
+/* DESKTOP LINKS + LOGO */
+
+header.scroll .logo,
+header.scroll nav > ul > li > a{
+
+    color:#111 !important;
+
+}
+
+/* hover desktop */
+
+header.scroll nav > ul > li > a:hover{
+
+    color:#FFD84D;
+
+}
+
+/* underline hover */
+
+header.scroll nav a::after{
+
+    background:#111;
 
 }
 
@@ -72,13 +98,10 @@ header.scroll{
 .container{
 
     width:min(1300px,92%);
-
     margin:auto;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
 }
@@ -90,11 +113,9 @@ header.scroll{
 .logo{
 
     color:white;
-
     text-decoration:none;
 
     font-size:30px;
-
     font-weight:700;
 
 }
@@ -106,15 +127,13 @@ header.scroll{
 }
 
 /* ==========================================
-                MENU
+                MENU DESKTOP
 ========================================== */
 
 nav{
 
     flex:1;
-
     display:flex;
-
     justify-content:center;
 
 }
@@ -122,7 +141,6 @@ nav{
 nav ul{
 
     display:flex;
-
     gap:36px;
 
     list-style:none;
@@ -132,11 +150,9 @@ nav ul{
 nav a{
 
     color:white;
-
     text-decoration:none;
 
     font-size:15px;
-
     font-weight:500;
 
     position:relative;
@@ -145,24 +161,25 @@ nav a{
 
 }
 
+/* hover desktop */
+
 nav a:hover{
 
     color:#FFD84D;
 
 }
 
+/* underline */
+
 nav a::after{
 
     content:"";
 
     position:absolute;
-
     left:0;
-
     bottom:-8px;
 
     width:0;
-
     height:2px;
 
     background:#FFD84D;
@@ -180,13 +197,12 @@ nav a:hover::after{
 }
 
 /* ==========================================
-            BOTÃO WHATSAPP (AMARELO)
+            BOTÃO WHATSAPP
 ========================================== */
 
 .btn-whatsapp{
 
     display:flex;
-
     align-items:center;
 
     gap:10px;
@@ -211,17 +227,12 @@ nav a:hover::after{
 
     transition:.35s;
 
+    position:relative;
     overflow:hidden;
 
-    position:relative;
-
 }
 
-.btn-whatsapp i{
-
-    font-size:20px;
-
-}
+/* hover */
 
 .btn-whatsapp:hover{
 
@@ -238,13 +249,10 @@ nav a:hover::after{
     content:"";
 
     position:absolute;
-
     top:0;
-
     left:-120%;
 
     width:50%;
-
     height:100%;
 
     background:linear-gradient(
@@ -265,7 +273,7 @@ nav a:hover::after{
 }
 
 /* ==========================================
-            MENU MOBILE
+            HAMBURGUER
 ========================================== */
 
 .hamburger{
@@ -273,13 +281,11 @@ nav a:hover::after{
     display:none;
 
     width:32px;
-
     height:24px;
 
     cursor:pointer;
 
     flex-direction:column;
-
     justify-content:space-between;
 
 }
@@ -287,7 +293,6 @@ nav a:hover::after{
 .hamburger span{
 
     width:100%;
-
     height:3px;
 
     border-radius:50px;
@@ -297,6 +302,8 @@ nav a:hover::after{
     transition:.35s;
 
 }
+
+/* animação */
 
 .hamburger.active span:nth-child(1){
     transform:translateY(10px) rotate(45deg);
@@ -311,7 +318,7 @@ nav a:hover::after{
 }
 
 /* ==========================================
-                RESPONSIVO
+                MOBILE
 ========================================== */
 
 @media(max-width:950px){
@@ -327,7 +334,6 @@ nav a:hover::after{
     nav{
 
         position:fixed;
-
         top:0;
         right:-100%;
 
@@ -344,7 +350,7 @@ nav a:hover::after{
 
         transition:.4s;
 
-        border-left:1px solid rgba(255, 221, 87, .08);
+        border-left:1px solid rgba(255,255,255,.08);
 
     }
 
@@ -352,15 +358,42 @@ nav a:hover::after{
         right:0;
     }
 
+    /* MENU MOBILE ABERTO (BRANCO) */
+
+    nav.active{
+
+        background:#ffffff;
+        border-left:1px solid rgba(0,0,0,.08);
+
+    }
+
     nav ul{
 
         flex-direction:column;
-
         gap:40px;
 
         align-items:center;
-
         width:100%;
+
+    }
+
+    nav.active ul li a{
+
+        color:#111 !important;
+
+    }
+
+    nav.active ul li a:hover{
+
+        color:#FFD84D !important;
+
+    }
+
+    /* hambúrguer no scroll */
+
+    header.scroll .hamburger span{
+
+        background:#111;
 
     }
 
@@ -373,13 +406,12 @@ nav a:hover::after{
 section{
 
     min-height:100vh;
-
     padding:120px 8%;
 
 }
 
 /* ==========================================
-                LINK ATIVO
+                ACTIVE LINK
 ========================================== */
 
 nav a.active{
