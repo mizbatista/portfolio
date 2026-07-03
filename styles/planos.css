@@ -1,0 +1,747 @@
+/* ==========================================
+                PLANOS
+========================================== */
+
+.plans{
+
+    background:#ffffff;
+
+    padding:120px 8%;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Luz suave de fundo */
+
+.plans::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-250px;
+
+    right:-250px;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(255,216,77,.18) 0%,
+    rgba(255,216,77,.08) 45%,
+    transparent 70%);
+
+    filter:blur(80px);
+
+    z-index:0;
+
+}
+
+/* ==========================================
+            CONTAINER
+========================================== */
+
+.plans-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+                TÍTULO
+========================================== */
+
+.plans-title{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+.section-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    background:#FFF7D6;
+
+    color:#C58C00;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.plans-title h2{
+
+    margin-top:25px;
+
+    font-size:48px;
+
+    color:#111;
+
+    line-height:1.2;
+
+}
+
+.plans-title p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+                GRID
+========================================== */
+
+.plans-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+/* ==========================================
+                CARD
+========================================== */
+
+.plan-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:45px 35px;
+
+    border:1px solid #ececec;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.06);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* brilho */
+
+.plan-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150px;
+
+    right:-150px;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,216,77,.08);
+
+    filter:blur(35px);
+
+}
+
+/* hover */
+
+.plan-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 35px 80px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+            PLANO DESTAQUE
+========================================== */
+
+.featured{
+
+    border:2px solid #FFD84D;
+
+    transform:scale(1.04);
+
+}
+
+.featured:hover{
+
+    transform:scale(1.04) translateY(-12px);
+
+}
+
+/* Badge */
+
+.featured-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    background:#FFD84D;
+
+    color:#111;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            TIPO DO PLANO
+========================================== */
+
+.plan-type{
+
+    display:inline-block;
+
+    color:#C58C00;
+
+    background:#FFF7D6;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+                PREÇO
+========================================== */
+
+.plan-card h3{
+
+    margin-top:28px;
+
+    font-size:52px;
+
+    color:#111;
+
+}
+
+.plan-card h3::before{
+
+    content:"";
+
+}
+
+/* ==========================================
+            DESCRIÇÃO
+========================================== */
+
+.plan-description{
+
+    margin:18px 0 35px;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+            LISTA
+========================================== */
+
+.plan-card ul{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.plan-card ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#444;
+
+    font-size:15px;
+
+}
+
+.plan-card ul li i{
+
+    color:#FFD84D;
+
+    font-size:16px;
+
+}
+
+/* ==========================================
+                BOTÃO
+========================================== */
+
+.plan-button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:40px;
+
+    padding:16px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    color:#111;
+
+    background:linear-gradient(
+    135deg,
+    #FFF1A6,
+    #FFD84D);
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(255,216,77,.25);
+
+}
+
+.plan-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(255,216,77,.45);
+
+}
+
+/* ==========================================
+        SERVIÇOS COMPLEMENTARES
+========================================== */
+
+.extra-services{
+
+    margin-top:120px;
+
+    text-align:center;
+
+}
+
+.extra-services h3{
+
+    font-size:38px;
+
+    color:#111;
+
+    margin-bottom:18px;
+
+}
+
+.extra-services p{
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+            GRID SERVIÇOS
+========================================== */
+
+.extras-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+/* ==========================================
+            CARD SERVIÇO
+========================================== */
+
+.extra-item{
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    transition:.35s ease;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.extra-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#FFD84D;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+
+}
+
+.extra-item h4{
+
+    color:#222;
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+}
+
+.extra-item span{
+
+    color:#C58C00;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            EFEITO PREMIUM
+========================================== */
+
+.featured{
+
+    overflow:hidden;
+
+}
+
+.featured::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-35%;
+
+    width:45%;
+
+    height:260%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    animation:shine 6s linear infinite;
+
+}
+
+@keyframes shine{
+
+    0%{
+
+        left:-60%;
+
+    }
+
+    100%{
+
+        left:150%;
+
+    }
+
+}
+
+/* ==========================================
+            RESPONSIVO TABLET
+========================================== */
+
+@media(max-width:1100px){
+
+    .plans-grid{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+    .featured{
+
+        transform:scale(1);
+
+    }
+
+    .featured:hover{
+
+        transform:translateY(-12px);
+
+    }
+
+    .extras-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================
+            RESPONSIVO MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .plans{
+
+        padding:90px 6%;
+
+    }
+
+    .plans-title h2{
+
+        font-size:34px;
+
+    }
+
+    .plans-title p{
+
+        font-size:16px;
+
+    }
+
+    .plan-card{
+
+        padding:35px 25px;
+
+    }
+
+    .plan-card h3{
+
+        font-size:42px;
+
+    }
+
+    .plan-description{
+
+        font-size:15px;
+
+    }
+
+    .plan-card ul li{
+
+        font-size:14px;
+
+    }
+
+    .extras-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .extra-services{
+
+        margin-top:90px;
+
+    }
+
+    .extra-services h3{
+
+        font-size:30px;
+
+    }
+
+    .extra-services p{
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================================
+            MICRO ANIMAÇÕES
+========================================== */
+
+.plan-card{
+
+    animation:cardFade .8s ease both;
+
+}
+
+.plan-card:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.plan-card:nth-child(3){
+
+    animation-delay:.30s;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+            BOTÃO HOVER
+========================================== */
+
+.plan-button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.plan-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:45%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.plan-button:hover::before{
+
+    left:150%;
+
+}
+
+/* ==========================================
+            DETALHES
+========================================== */
+
+.plan-card ul li{
+
+    transition:.25s;
+
+}
+
+.plan-card ul li:hover{
+
+    transform:translateX(5px);
+
+}
+
+.plan-card ul li i{
+
+    transition:.25s;
+
+}
+
+.plan-card ul li:hover i{
+
+    transform:scale(1.2);
+
+}
