@@ -180,3 +180,71 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+
+/* ==========================================
+            POPUP DOS PROJETOS
+========================================== */
+
+const imagensProjeto = document.querySelectorAll(".abrir-popup");
+
+const popup = document.getElementById("popupImagem");
+
+const imagemPopup = document.getElementById("imagemPopup");
+
+const fecharPopup = document.querySelector(".fechar-popup");
+
+/* abrir popup */
+
+imagensProjeto.forEach(imagem => {
+
+    imagem.addEventListener("click", () => {
+
+        popup.classList.add("ativo");
+
+        imagemPopup.src = imagem.src;
+
+        imagemPopup.alt = imagem.alt;
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+/* fechar botão */
+
+fecharPopup.addEventListener("click", () => {
+
+    popup.classList.remove("ativo");
+
+    document.body.style.overflow = "auto";
+
+});
+
+/* fechar clicando fora */
+
+popup.addEventListener("click", (e) => {
+
+    if(e.target === popup){
+
+        popup.classList.remove("ativo");
+
+        document.body.style.overflow = "auto";
+
+    }
+
+});
+
+/* fechar com ESC */
+
+document.addEventListener("keydown", (e) => {
+
+    if(e.key === "Escape"){
+
+        popup.classList.remove("ativo");
+
+        document.body.style.overflow = "auto";
+
+    }
+
+});
